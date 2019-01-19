@@ -19,10 +19,12 @@ gulp.task('less', function () {
 
   return gulp.src(configs.less.compile)
     .pipe(less().on('error', function (err) {
-      console.log(err);
+        console.error(err.message);
+        this.emit('end');
     }))
     .pipe(cssmin().on('error', function(err) {
-      console.log(err);
+        console.error(err.message);
+        this.emit('end');
     }))
     .pipe(rename({suffix: '.min'}))
     .pipe(gulp.dest(configs.less.output));

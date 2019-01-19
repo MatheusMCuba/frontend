@@ -1,0 +1,105 @@
+.weather{
+    width: ~"calc(100% - 180px)";
+    height: auto;
+    background: beige;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 9px 3px rgba(0,0,0,.1);
+    color: gray;
+    position: relative;
+
+    .close{
+        border: none;
+        background: none;
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        cursor: pointer;
+
+        svg path{
+            fill: orange;
+        }
+    }
+
+    hr{
+        border-color: orange !important;
+    }
+
+    .content{
+        padding: 10px 30px;
+
+        h3{
+            font-size: 3rem;
+            margin: 20px 0;
+        }
+
+        .row{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-top: 20px;
+
+            .column{
+                width: 33%;
+                display: flex;
+                align-items: center;
+                font-weight: lighter;
+
+                strong{
+                    margin-left: 5px;
+                }
+
+                .block{
+                    width: 50%;
+                    font-weight: bolder;
+
+                    svg {
+                        margin-right: 5px;
+                        path{
+                            fill: orange;
+                        }
+                    }
+                }
+            }
+        }
+
+        .week{
+            display: flex;
+
+            .week-item{
+                flex: 1 1 auto;
+                margin: 0 10px;
+
+                &:first-child{
+                    margin-left: 0;
+                }
+
+                &:last-child{
+                    margin-right: 0;
+                }
+
+                span{
+                    font-weight: bolder;
+                    display: block;    
+
+                    &:not(:first-child){
+                        color: orange;
+                    }
+                    &:first-child{ 
+                        width: 100%;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+
+        &:last-child{
+            padding-bottom: 0;
+        }
+    }
+
+    &.hide{
+        display: none;
+    }
+}

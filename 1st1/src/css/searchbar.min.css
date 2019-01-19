@@ -1,0 +1,1 @@
+.searchbar{width:calc(100% - 140px);margin-bottom:50px;position:relative}.searchbar input{width:calc(100% - 32px);height:100%;font-family:inherit;padding:15px;font-size:1.2rem;border:1px solid orange}.searchbar input:focus+svg path{fill:gray}.searchbar svg{width:26px!important;height:26px;position:absolute;right:15px;top:15px}.searchbar svg path{fill:#d3d3d3}
