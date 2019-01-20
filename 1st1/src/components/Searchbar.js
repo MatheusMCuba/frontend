@@ -8,7 +8,8 @@ class SearchBar extends Component {
     return (
         <div className="searchbar">
             <input 
-                placeholder="Insira aqui o nome da cidade" 
+                placeholder="Insira aqui o nome da cidade"
+                onBlur={this.props.onBlur}
             />
             <FontAwesomeIcon icon="search"></FontAwesomeIcon>
         </div>

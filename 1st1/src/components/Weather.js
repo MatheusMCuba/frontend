@@ -12,7 +12,7 @@ class Weather extends Component {
     return (
         <div className="weather">
             <div className="content">
-              <button className="close">
+              <button className="close" onClick={this.props.onClick}>
                 <FontAwesomeIcon icon="times"></FontAwesomeIcon>
               </button>
               <strong>{weather.city}</strong>

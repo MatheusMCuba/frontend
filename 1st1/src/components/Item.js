@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 class Item extends Component {
   render() {
     let isTitle = this.props.isTitle;
+    let city = this.props.city;
     if(isTitle)
     {
         return(
@@ -16,9 +17,9 @@ class Item extends Component {
     else{
         return (
             <div className="item">
-                <span>{this.props.min}°</span>
-                <span>{this.props.max}°</span>
-                <span>{this.props.city}</span>
+                <span>{city.min}°</span>
+                <span>{city.max}°</span>
+                <span>{city.city}</span>
             </div>  
         );
     }
