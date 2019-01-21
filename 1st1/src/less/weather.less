@@ -1,12 +1,18 @@
+@import '_variables.less';
+
 .weather{
     width: ~"calc(100% - 180px)";
     height: auto;
-    background: beige;
+    background: #FFF3E3;
     padding: 20px;
     margin-bottom: 20px;
     box-shadow: 0 0 9px 3px rgba(0,0,0,.1);
-    color: gray;
+    color: #554D42;
     position: relative;
+
+    @media screen and (max-width: 1023px) {
+        width: 100%;
+    }
 
     .close{
         border: none;
@@ -16,13 +22,18 @@
         right: 15px;
         cursor: pointer;
 
+        @media screen and (max-width: 1023px) {
+            top: 15px;
+            right: 30px;
+        }
+
         svg path{
-            fill: orange;
+            fill: @main-color;
         }
     }
 
     hr{
-        border-color: orange !important;
+        border-color: @main-color !important;
     }
 
     .content{
@@ -46,6 +57,10 @@
                 align-items: center;
                 font-weight: lighter;
 
+                @media screen and (max-width: 1023px) {
+                    width: 40%;
+                }
+
                 strong{
                     margin-left: 5px;
                 }
@@ -57,7 +72,7 @@
                     svg {
                         margin-right: 5px;
                         path{
-                            fill: orange;
+                            fill: @main-color;
                         }
                     }
                 }
@@ -77,6 +92,10 @@
 
                 &:last-child{
                     margin-right: 0;
+
+                    @media screen and (max-width: 1023px) {
+                        display: none;
+                    }
                 }
 
                 span{
@@ -84,7 +103,7 @@
                     display: block;    
 
                     &:not(:first-child){
-                        color: orange;
+                        color: @main-color;
                     }
                     &:first-child{ 
                         width: 100%;
