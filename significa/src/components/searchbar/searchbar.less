@@ -1,0 +1,30 @@
+@import '../../less/_variables.less';
+
+.search{
+    border-radius: 4px;
+    background: white;
+    padding: 12px 12px 12px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+    
+    > svg{
+        margin-right: 12px;
+    }
+    input{
+        position: relative;
+        border-radius: 4px;
+        width:~"calc(100% - 28px)";
+        font-family: inherit;
+        font-size: 16px;
+        border: none;
+        color: @color-light-grey;
+
+        &:focus{
+            color: @color-grey;
+            border: none;
+            outline: none;
+        }
+    }
+}

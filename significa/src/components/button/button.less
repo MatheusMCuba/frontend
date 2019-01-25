@@ -1,0 +1,39 @@
+@import './../../less/_variables.less';
+
+
+.btn{
+    background: none;
+    border: 1px solid @color-mid-grey;
+    color: @color-light-grey;
+    font-size: 14px;
+    padding: 8px;
+    border-radius: 3px;
+    cursor: pointer;
+    
+    &:hover{
+        border-color: @color-red;
+    }
+
+    &:focus{
+        outline: none;
+    }
+
+    svg{
+        width: 16px !important;
+        height: 16px !important;
+        position: relative;
+        float: left;
+        margin-right: 8px;
+    }
+
+    &.red{
+        color: white;
+        border-color: transparent;
+        background: @color-red;
+
+        svg path{
+            fill: white;
+            stroke: white;
+        }
+    }
+}

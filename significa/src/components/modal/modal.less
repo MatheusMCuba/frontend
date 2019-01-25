@@ -1,0 +1,114 @@
+@import './../../less/_variables.less';
+
+.modal{
+    width: 100%;
+    
+    .back{
+        border: 0;
+        background: none;
+        cursor: pointer;
+        margin-bottom: 20px;
+        padding: 0;
+        &:focus{
+            outline: none;
+        }
+    }
+
+    .wrapper{
+        .info, .cover{
+            position: relative;
+            float: left;
+        }
+        .info{
+            width: 59%;
+            padding-right: 1%;
+
+            > ul{
+                margin-bottom: 20px;
+                padding: 0;
+                list-style: none;
+                color: @color-light-grey;
+                li{
+                    margin-right: 16px;
+                    display: inline-block;
+                    position: relative;
+                    font-size: 20px;
+
+                    &:not(:last-child):after{
+                        content: '';
+                        border: 1px solid @color-light-grey;
+                        position: absolute;
+                        top: 40%;
+                        right: -10px;
+                    }
+
+                    label{
+                        background-color: @color-light-grey;
+                        color: @color-dark;
+                        border-radius: 3px;
+                        padding: 4px 6px;
+                        font-weight: bold;
+                    }
+                }
+            }
+
+            h1{
+                color: white;
+                font-size: 80px;
+                font-weight: bolder;
+                margin: 25px 0 0 0;
+            }
+
+            .labels{
+                margin-top: 20px;
+                > *{
+                    margin: 8px;
+
+                    &:first-child{
+                        margin-left: 0;
+                    }
+                }
+            }
+
+            > .block{
+                width: 70%;
+            } 
+            .block{
+                margin-top: 36px;
+                font-size: 16px;
+                h3{
+                    font-weight: 500;
+                    color: @color-light-grey;
+                }
+                ul{
+                    padding: 0;
+                    list-style: none;
+                    color: white;
+                    li{
+                        margin: 5px 0;
+                    }
+                }
+                p{
+                    color: white;
+                }
+            }
+
+            .row{
+                width: 70%;
+                display: flex;
+                justify-content: space-between;
+                .block{
+                    position: relative;
+                    float: left;
+                }
+            }
+        }
+        .cover{
+            width: 40%;
+            img{
+                width: 100%;
+            }
+        }
+
+    }
+}
